@@ -212,6 +212,75 @@ function AccordionItem({ client, isActive, onMouseEnter }: ItemProps) {
   );
 }
 
+/* ── Mobile card ── */
+function MobileCard({ client }: { client: Client }) {
+  const { Icon } = client;
+  return (
+    <div
+      className="relative overflow-hidden rounded-2xl h-44"
+      style={{
+        backgroundImage: `url('${client.image}')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'top center',
+      }}
+    >
+      {/* Gradient */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            'linear-gradient(to top, rgba(2,6,23,1) 0%, rgba(2,6,23,0.85) 40%, rgba(2,6,23,0.35) 100%)',
+        }}
+      />
+      {/* Border */}
+      <div
+        className="absolute inset-0 rounded-2xl pointer-events-none"
+        style={{ boxShadow: 'inset 0 0 0 1px rgba(245,158,11,0.18)' }}
+      />
+
+      {/* Icon */}
+      <div
+        className="absolute top-3 right-3 w-7 h-7 rounded-lg flex items-center justify-center"
+        style={{
+          background: 'rgba(245,158,11,0.12)',
+          border: '1px solid rgba(245,158,11,0.28)',
+          backdropFilter: 'blur(10px)',
+        }}
+      >
+        <Icon size={13} style={{ color: '#F59E0B' }} />
+      </div>
+
+      {/* Info */}
+      <div className="absolute bottom-0 left-0 right-0 px-4 pb-4 z-10">
+        <span className="inline-flex items-center text-[9px] font-bold tracking-[0.18em] uppercase text-amber-400 mb-1.5">
+          <span className="w-3 h-px bg-amber-400/60 mr-2" />
+          {client.segment}
+        </span>
+        <div className="flex items-end justify-between gap-3">
+          <h3
+            className="text-white font-bold text-base leading-snug"
+            style={{ letterSpacing: '-0.03em' }}
+          >
+            {client.name}
+          </h3>
+          <a
+            href={client.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="shrink-0 inline-flex items-center gap-1 text-[11px] font-semibold text-amber-400 pb-0.5"
+          >
+            Ver site
+            <ExternalLink size={10} />
+          </a>
+        </div>
+        <p className="text-white/60 text-[11px] leading-relaxed mt-1.5 line-clamp-2">
+          {client.description}
+        </p>
+      </div>
+    </div>
+  );
+}
+
 /* ── Section ── */
 export default function Portfolio() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -269,9 +338,10 @@ export default function Portfolio() {
             </div>
           </div>
 
-          {/* Right — accordion */}
+          {/* Right — accordion (desktop) */}
           <div className="w-full lg:flex-1 min-w-0">
-            <div className="flex gap-2.5 h-[520px]">
+            {/* Desktop: horizontal accordion */}
+            <div className="hidden lg:flex gap-2.5 h-[520px]">
               {clients.map((client, i) => (
                 <AccordionItem
                   key={client.name}
@@ -279,6 +349,13 @@ export default function Portfolio() {
                   isActive={i === activeIndex}
                   onMouseEnter={() => setActiveIndex(i)}
                 />
+              ))}
+            </div>
+
+            {/* Mobile: vertical card stack */}
+            <div className="flex lg:hidden flex-col gap-3">
+              {clients.map((client) => (
+                <MobileCard key={client.name} client={client} />
               ))}
             </div>
           </div>
