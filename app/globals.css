@@ -1,26 +1,124 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* ── Brand palette ab3Design ───────────────────────────────────────── */
+  /* emerald-400 remapeado para o roxo primário — cascateia por todo o site */
+  --color-emerald-400: #7C3AED;
+
+  /* Tokens zinc remapeados para a nova paleta */
+  --color-zinc-50:  #F3F3F3;   /* cinza claro — áreas claras                */
+  --color-zinc-100: #F3F3F3;   /* cinza claro — áreas claras                */
+  --color-zinc-200: #E2E8F0;   /* slate-200 — bordas em fundo claro         */
+  --color-zinc-300: #CBD5E1;   /* slate-300 — hover bordas                  */
+  --color-zinc-400: #94A3B8;   /* slate-400 — textos secundários leves      */
+  --color-zinc-500: #94A3B8;   /* slate-400 — textos secundários            */
+  --color-zinc-600: #64748B;   /* slate-600 — textos escuros secundários    */
+  --color-zinc-700: #334155;   /* slate-700 — elementos de apoio            */
+  --color-zinc-800: #1E293B;   /* slate-800 / navy variant — cards escuros  */
+  --color-zinc-900: #0F172A;   /* navy 950 — fundo institucional escuro     */
+  --color-zinc-950: #0F172A;   /* navy 950 — fundo mais escuro              */
+
+  /* Tokens extras para uso explícito */
+  --color-brand:     #7C3AED;  /* roxo — identidade primária                */
+  --color-brand-blue:#2563EB;  /* azul — tech, links, interações            */
+  --color-brand-cta: #F59E0B;  /* âmbar/laranja — CTAs e destaques          */
+  --color-muted:     #94A3B8;  /* cinza azulado — textos e detalhes sutis   */
+  --color-surface:   #F3F3F3;  /* cinza claro — superfícies claras          */
+  --color-navy:      #0F172A;  /* azul escuro — fundo institucional         */
+  --color-site-dark: #121212;  /* preto exclusivo da seção sites            */
+
+  --font-inter: 'Inter', sans-serif;
+
+  --animate-fade-in-up: fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-fade-in-up-d1: fade-in-up 0.8s 0.15s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-fade-in-up-d2: fade-in-up 0.8s 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-fade-in-up-d3: fade-in-up 0.8s 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-bounce-slow: bounce-slow 2s ease-in-out infinite;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes float-orb {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33%       { transform: translate(22px, -28px) scale(1.06); }
+  66%       { transform: translate(-16px, 16px) scale(0.96); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', sans-serif;
+  background: #0F172A;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Grain overlay — aplique a classe .grain em containers escuros */
+.grain {
+  position: relative;
+}
+
+.grain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.15;
+  pointer-events: none;
+  border-radius: inherit;
+  z-index: 0;
+}
+
+.grain > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Hover lift — dark backgrounds ──────────────────────────────────── */
+.card-dark {
+  transition: background-color 0.22s ease, border-color 0.22s ease,
+              transform 0.25s cubic-bezier(0.16,1,0.3,1),
+              box-shadow 0.22s ease;
+}
+.card-dark:hover {
+  transform:         translateY(-5px) !important;
+  border-color:      rgba(124,58,237,0.45) !important;
+  background-color:  rgba(124,58,237,0.07) !important;
+  box-shadow:        0 20px 56px rgba(124,58,237,0.18), 0 4px 12px rgba(0,0,0,0.3) !important;
+}
+
+/* ── Hover lift — light backgrounds ─────────────────────────────────── */
+.card-light {
+  transition: border-color 0.22s ease,
+              transform 0.25s cubic-bezier(0.16,1,0.3,1),
+              box-shadow 0.22s ease,
+              background-color 0.22s ease;
+}
+.card-light:hover {
+  transform:        translateY(-5px) !important;
+  border-color:     rgba(124,58,237,0.45) !important;
+  background-color: rgba(124,58,237,0.03) !important;
+  box-shadow:       0 20px 56px rgba(124,58,237,0.12) !important;
 }
