@@ -4,7 +4,7 @@ import { ArrowRight, Star } from 'lucide-react';
 const stats = [
   { metric: '50+',  label: 'Projetos entregues' },
   { metric: '100%', label: 'Clientes satisfeitos' },
-  { metric: '14d',  label: 'Prazo médio de entrega' },
+  { metric: '14d',  label: 'Prazo médio' },
 ];
 
 export default function Hero() {
@@ -187,7 +187,7 @@ export default function Hero() {
                     <p className="text-xl lg:text-2xl font-bold text-white leading-tight" style={{ letterSpacing: '-0.04em' }}>
                       {stat.metric}
                     </p>
-                    <p className="text-[10px] md:text-xs text-white/45 font-light mt-0.5 whitespace-nowrap">{stat.label}</p>
+                    <p className="text-[10px] md:text-xs text-white/45 font-light mt-0.5">{stat.label}</p>
                   </div>
                   {i < stats.length - 1 && (
                     <div className="w-px h-8 lg:h-10 bg-white/10 mr-5 lg:mr-16 shrink-0" />
