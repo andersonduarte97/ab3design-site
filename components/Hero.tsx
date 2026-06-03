@@ -57,13 +57,13 @@ export default function Hero() {
         <div className="relative flex flex-col flex-1" style={{ zIndex: 1 }}>
 
           {/* Main content */}
-          <div className="flex-1 flex items-center px-6 md:px-20 pt-16 md:pt-20">
-            <div className="w-full flex flex-col md:flex-row items-center gap-10 md:gap-16">
+          <div className="flex-1 flex items-center px-6 lg:px-20 pt-14 lg:pt-20">
+            <div className="w-full flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
 
               {/* Left */}
-              <div className="flex-1 min-w-0">
+              <div className="flex-1 min-w-0 w-full">
                 <h1
-                  className="text-4xl md:text-[5rem] font-bold text-white leading-[1.08] mb-4 md:mb-5"
+                  className="text-4xl md:text-5xl lg:text-[5rem] font-bold text-white leading-[1.08] mb-4 lg:mb-5"
                   style={{ letterSpacing: '-0.04em', animation: 'var(--animate-fade-in-up-d1)' }}
                 >
                   Design que{' '}
@@ -73,7 +73,7 @@ export default function Hero() {
                 </h1>
 
                 <p
-                  className="text-[#94A3B8] font-light text-base md:text-lg mb-6 max-w-md leading-relaxed"
+                  className="text-[#94A3B8] font-light text-base lg:text-lg mb-6 max-w-md leading-relaxed"
                   style={{ animation: 'var(--animate-fade-in-up-d2)' }}
                 >
                   Sites que vendem, identidades que ficam na memória e
@@ -101,7 +101,7 @@ export default function Hero() {
 
               {/* Right — browser mockup (desktop only) */}
               <div
-                className="shrink-0 hidden md:block relative"
+                className="shrink-0 hidden lg:block relative"
                 style={{ animation: 'var(--animate-fade-in-up-d2)' }}
               >
                 <div
@@ -173,7 +173,7 @@ export default function Hero() {
 
           {/* Stats bar */}
           <div
-            className="px-6 md:px-20 py-5 shrink-0"
+            className="px-6 lg:px-20 py-5 shrink-0"
             style={{
               borderTop: '1px solid rgba(255,255,255,0.07)',
               background: 'rgba(15,23,42,0.65)',
@@ -183,14 +183,14 @@ export default function Hero() {
             <div className="flex items-center">
               {stats.map((stat, i) => (
                 <div key={stat.metric} className="flex items-center">
-                  <div className="pr-5 md:pr-16">
-                    <p className="text-xl md:text-2xl font-bold text-white leading-tight" style={{ letterSpacing: '-0.04em' }}>
+                  <div className="pr-5 lg:pr-16">
+                    <p className="text-xl lg:text-2xl font-bold text-white leading-tight" style={{ letterSpacing: '-0.04em' }}>
                       {stat.metric}
                     </p>
                     <p className="text-[10px] md:text-xs text-white/45 font-light mt-0.5 whitespace-nowrap">{stat.label}</p>
                   </div>
                   {i < stats.length - 1 && (
-                    <div className="w-px h-8 md:h-10 bg-white/10 mr-5 md:mr-16 shrink-0" />
+                    <div className="w-px h-8 lg:h-10 bg-white/10 mr-5 lg:mr-16 shrink-0" />
                   )}
                 </div>
               ))}
