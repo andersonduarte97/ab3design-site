@@ -1,11 +1,22 @@
+"use client";
+
 import ActionButton from './ui/ActionButton';
 import SmoothLink from './ui/SmoothLink';
+import { Typewriter } from './ui/typewriter-text';
 import { ArrowRight, Star } from 'lucide-react';
 
 const stats = [
   { metric: '50+',  label: 'Projetos entregues' },
   { metric: '100%', label: 'Clientes satisfeitos' },
   { metric: '14d',  label: 'Prazo médio' },
+];
+
+const phrases = [
+  'Sites que vendem por você.',
+  'Design que fica na memória.',
+  'Código que escala com você.',
+  'Automações que nunca param.',
+  'Resultados que aparecem.',
 ];
 
 export default function Hero() {
@@ -63,24 +74,40 @@ export default function Hero() {
 
               {/* Left */}
               <div className="flex-1 min-w-0 w-full">
+
+                {/* Eyebrow */}
+                <p
+                  className="text-[11px] font-bold tracking-[0.2em] uppercase text-violet-400 mb-5"
+                  style={{ animation: 'var(--animate-fade-in-up-d1)' }}
+                >
+                  Agência digital · AB3Design
+                </p>
+
+                {/* Static headline */}
                 <h1
-                  className="text-4xl md:text-5xl lg:text-[5rem] font-bold text-white leading-[1.08] mb-4 lg:mb-5"
+                  className="text-4xl md:text-5xl lg:text-[4.5rem] font-bold text-white leading-[1.08] mb-3 lg:mb-4"
                   style={{ letterSpacing: '-0.04em', animation: 'var(--animate-fade-in-up-d1)' }}
                 >
-                  Design que{' '}
-                  <span style={{ color: '#F59E0B' }}>converte.</span>
+                  Seu negócio merece
                   <br />
-                  Código que escala.
+                  <span style={{ color: '#F59E0B' }}>mais do que um site.</span>
                 </h1>
 
-                <p
-                  className="text-[#94A3B8] font-light text-base lg:text-lg mb-6 max-w-md leading-relaxed"
+                {/* Typewriter rotativo */}
+                <div
+                  className="mb-6 lg:mb-7 min-h-[2rem]"
                   style={{ animation: 'var(--animate-fade-in-up-d2)' }}
                 >
-                  Sites que vendem, identidades que ficam na memória e
-                  automações que trabalham por você enquanto você foca
-                  no que realmente importa: crescer.
-                </p>
+                  <Typewriter
+                    text={phrases}
+                    speed={65}
+                    deleteSpeed={35}
+                    delay={2200}
+                    loop={true}
+                    cursor="_"
+                    className="text-lg md:text-xl lg:text-2xl font-light text-white/70 tracking-tight"
+                  />
+                </div>
 
                 <div
                   className="flex items-center gap-4 flex-wrap"
