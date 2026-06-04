@@ -270,7 +270,7 @@ export default function ProcessBoard() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16 md:mb-20">
           {/* Left — Slide mockup */}
           <Reveal direction="left">
-            <div className="relative">
+            <div className="relative pb-6 pr-2">
               {/* Glow behind mockup */}
               <div
                 className="absolute -inset-6 rounded-[3rem] pointer-events-none"
@@ -283,7 +283,7 @@ export default function ProcessBoard() {
               <SlideMockup />
               {/* Floating badge */}
               <div
-                className="absolute -bottom-4 -right-3 md:-right-6 flex items-center gap-2.5 rounded-full pl-3 pr-4 py-2.5 shadow-xl"
+                className="absolute -bottom-2 right-0 flex items-center gap-2.5 rounded-full pl-3 pr-4 py-2.5 shadow-xl"
                 style={{
                   background: "#fff",
                   border: "1px solid rgba(0,0,0,0.06)",

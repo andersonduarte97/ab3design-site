@@ -178,7 +178,7 @@ export default function DesignSection() {
                   <p className="text-sm font-semibold text-zinc-900 leading-tight">@ab3design</p>
                   <p className="text-xs text-zinc-400 font-light">Design · Branding · Social</p>
                 </div>
-                <div className="flex gap-4 shrink-0">
+                <div className="hidden sm:flex gap-4 shrink-0">
                   {[
                     { n: '142', l: 'posts' },
                     { n: '4.8k', l: 'seguidores' },

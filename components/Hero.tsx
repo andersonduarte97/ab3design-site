@@ -11,11 +11,11 @@ const stats = [
 ];
 
 const phrases = [
-  'Sites que vendem por você.',
-  'Design que fica na memória.',
-  'Código que escala com você.',
-  'Automações que nunca param.',
-  'Resultados que aparecem.',
+  'Com um site que vende por você.',
+  'Com design que ninguém esquece.',
+  'Com código que cresce com você.',
+  'Com automações que nunca param.',
+  'Com uma marca que abre portas.',
 ];
 
 export default function Hero() {
@@ -84,12 +84,12 @@ export default function Hero() {
 
                 {/* Static headline */}
                 <h1
-                  className="text-4xl md:text-5xl lg:text-[4.5rem] font-bold text-white leading-[1.08] mb-3 lg:mb-4"
+                  className="text-[1.9rem] sm:text-4xl md:text-5xl lg:text-[4.5rem] font-bold text-white leading-[1.1] mb-3 lg:mb-4"
                   style={{ letterSpacing: '-0.04em', animation: 'var(--animate-fade-in-up-d1)' }}
                 >
-                  Seu negócio merece
+                  Você entende do negócio.
                   <br />
-                  <span style={{ color: '#F59E0B' }}>mais do que um site.</span>
+                  <span style={{ color: '#F59E0B' }}>A gente faz o mundo entender.</span>
                 </h1>
 
                 {/* Typewriter rotativo */}
@@ -200,14 +200,14 @@ export default function Hero() {
             <div className="flex items-center">
               {stats.map((stat, i) => (
                 <div key={stat.metric} className="flex items-center">
-                  <div className="pr-5 lg:pr-16">
-                    <p className="text-xl lg:text-2xl font-bold text-white leading-tight" style={{ letterSpacing: '-0.04em' }}>
+                  <div className="pr-4 sm:pr-5 lg:pr-16">
+                    <p className="text-lg sm:text-xl lg:text-2xl font-bold text-white leading-tight" style={{ letterSpacing: '-0.04em' }}>
                       {stat.metric}
                     </p>
-                    <p className="text-[10px] md:text-xs text-white/45 font-light mt-0.5">{stat.label}</p>
+                    <p className="text-[9px] sm:text-[10px] md:text-xs text-white/45 font-light mt-0.5">{stat.label}</p>
                   </div>
                   {i < stats.length - 1 && (
-                    <div className="w-px h-8 lg:h-10 bg-white/10 mr-5 lg:mr-16 shrink-0" />
+                    <div className="w-px h-7 lg:h-10 bg-white/10 mr-4 sm:mr-5 lg:mr-16 shrink-0" />
                   )}
                 </div>
               ))}
