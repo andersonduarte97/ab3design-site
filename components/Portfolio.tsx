@@ -28,7 +28,7 @@ const clients: Client[] = [
     description:
       'Consultoria financeira com 25 anos de mercado em crédito, consórcio e investimentos. Plataforma que comunica solidez e conecta empresas às melhores soluções financeiras.',
     url: 'https://www.grupor3r.com.br',
-    image: '/images/clients/grupor3r.png',
+    image: '/images/clients/grupor3r.webp',
     Icon: TrendingUp,
   },
   {
@@ -37,7 +37,7 @@ const clients: Client[] = [
     description:
       'Holding estratégico com atuação em finanças, saúde, educação e tecnologia. Identidade digital unificada que representa a força do grupo em cada área de negócio.',
     url: 'https://www.grupoviaprime.com.br',
-    image: '/images/clients/grupoviaprime.png',
+    image: '/images/clients/grupoviaprime.webp',
     Icon: Building2,
   },
   {
@@ -46,7 +46,7 @@ const clients: Client[] = [
     description:
       'Ecossistema de contabilidade, BPO financeiro e assessoria jurídica com 500+ empresas atendidas. Site que transforma serviços complexos em proposta clara para gestores.',
     url: 'https://via-prime.com',
-    image: '/images/clients/viaprime.png',
+    image: '/images/clients/viaprime.webp',
     Icon: Sparkles,
   },
   {
@@ -55,7 +55,7 @@ const clients: Client[] = [
     description:
       'Especialista em gestão financeira e tributária para médicos, clínicas e gestores de saúde. Plataforma que transmite confiança para um público altamente qualificado.',
     url: 'https://www.viaprimehealth.com.br',
-    image: '/images/clients/viaprimehealth.png',
+    image: '/images/clients/viaprimehealth.webp',
     Icon: HeartPulse,
   },
   {
@@ -64,7 +64,7 @@ const clients: Client[] = [
     description:
       'Landing page especializada em IR para caminhoneiros autônomos. Projeto focado em conversão com linguagem direta para quem precisa de simplicidade e segurança fiscal.',
     url: 'https://lpcoopervesc.via-prime.com',
-    image: '/images/clients/coopersec.png',
+    image: '/images/clients/coopersec.webp',
     Icon: FileText,
   },
   {
@@ -73,7 +73,7 @@ const clients: Client[] = [
     description:
       'Seguradora com foco em proteção personalizada para empresas e pessoas físicas. Presença digital que transmite confiança e solidez em cada apólice emitida.',
     url: 'https://www.taamin.com.br',
-    image: '/images/clients/taamin.png',
+    image: '/images/clients/taamin.webp',
     Icon: Shield,
   },
 ];

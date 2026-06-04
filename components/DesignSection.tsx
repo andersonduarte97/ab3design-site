@@ -204,6 +204,7 @@ export default function DesignSection() {
                       <img
                         src={post.src}
                         alt=""
+                        loading="lazy"
                         className="w-full h-full object-cover"
                       />
                     ) : (
