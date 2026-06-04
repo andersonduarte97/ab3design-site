@@ -44,7 +44,7 @@ export default function Navbar() {
           }`}
         >
           {/* Logo */}
-          <a href="#" className="flex items-center transition-transform duration-300 hover:scale-102">
+          <a href="/" className="flex items-center transition-transform duration-300 hover:scale-102">
             <Image
               src="/images/logo.svg?v=2"
               alt="AB3Design"
