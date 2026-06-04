@@ -4,6 +4,7 @@ import { useMemo } from "react";
 import { Player } from "@remotion/player";
 import { PipelineJourney } from "@/components/ui/pipeline-journey";
 import Reveal from "@/components/ui/Reveal";
+import { scrollTo } from "@/lib/scrollTo";
 
 const ITEMS = [
   {
@@ -174,6 +175,7 @@ export default function ProcessBoard() {
             <div className="pt-2">
               <a
                 href="#contato"
+                onClick={(e) => scrollTo(e, '#contato')}
                 className="group inline-flex items-center gap-3 rounded-full pl-6 pr-2 py-2 hover:scale-105 transition-transform duration-300"
                 style={{ background: "#F59E0B" }}
               >

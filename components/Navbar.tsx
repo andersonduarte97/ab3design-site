@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import ActionButton from './ui/ActionButton';
 import { Menu, X } from 'lucide-react';
+import { scrollTo } from '@/lib/scrollTo';
 
 const links = [
   { label: 'Serviços', href: '#servicos' },
@@ -28,6 +29,11 @@ export default function Navbar() {
     document.body.style.overflow = mobileOpen ? 'hidden' : '';
     return () => { document.body.style.overflow = ''; };
   }, [mobileOpen]);
+
+  function handleNavClick(e: React.MouseEvent, href: string) {
+    scrollTo(e, href);
+    setMobileOpen(false);
+  }
 
   return (
     <>
@@ -61,6 +67,7 @@ export default function Navbar() {
               <li key={link.label}>
                 <a
                   href={link.href}
+                  onClick={(e) => handleNavClick(e, link.href)}
                   className="text-white/80 hover:text-white hover:bg-white/10 rounded-full px-4 py-2 text-sm transition-all duration-200"
                 >
                   {link.label}
@@ -71,12 +78,9 @@ export default function Navbar() {
 
           {/* Right side */}
           <div className="flex items-center gap-2">
-            {/* Desktop CTA */}
             <div className="hidden md:block">
               <ActionButton label="Fale conosco" href="#contato" />
             </div>
-
-            {/* Mobile hamburger */}
             <button
               className="md:hidden w-10 h-10 rounded-full flex items-center justify-center text-white/80 hover:text-white hover:bg-white/10 transition-all duration-200"
               onClick={() => setMobileOpen(true)}
@@ -95,7 +99,6 @@ export default function Navbar() {
         }`}
         style={{ background: '#080E1C' }}
       >
-        {/* Top bar */}
         <div className="flex items-center justify-between px-6 pt-6 pb-4 border-b border-white/[0.06]">
           <Image
             src="/images/logo.svg?v=2"
@@ -113,13 +116,12 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Nav links */}
         <nav className="flex-1 flex flex-col justify-center px-8 gap-1">
           {links.map((link, i) => (
             <a
               key={link.label}
               href={link.href}
-              onClick={() => setMobileOpen(false)}
+              onClick={(e) => handleNavClick(e, link.href)}
               className="text-white/60 hover:text-white text-[2rem] font-bold py-3.5 border-b border-white/[0.05] transition-colors duration-200"
               style={{ letterSpacing: '-0.02em', transitionDelay: `${i * 30}ms` }}
             >
@@ -128,11 +130,10 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* Bottom CTA */}
         <div className="px-8 pb-12 pt-6">
           <a
             href="#contato"
-            onClick={() => setMobileOpen(false)}
+            onClick={(e) => handleNavClick(e, '#contato')}
             className="flex items-center justify-center w-full rounded-full py-4 font-semibold text-base transition-transform duration-200 active:scale-95"
             style={{ background: '#F59E0B', color: '#000' }}
           >

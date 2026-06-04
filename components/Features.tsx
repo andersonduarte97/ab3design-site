@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import Reveal from './ui/Reveal';
+import SmoothLink from './ui/SmoothLink';
 
 interface Service {
   icon: LucideIcon;
@@ -87,13 +88,13 @@ export default function Features() {
               <p className="text-zinc-500 text-sm leading-relaxed mb-8 max-w-[320px]">
                 Da identidade visual ao sistema que automatiza sua operação. Cuidamos de cada detalhe para você crescer com segurança.
               </p>
-              <a
+              <SmoothLink
                 href="#contato"
                 className="inline-flex items-center gap-2 text-sm font-semibold text-[#7C3AED] hover:gap-3 transition-all duration-200"
               >
                 Fale com a gente
                 <ArrowRight size={14} />
-              </a>
+              </SmoothLink>
             </Reveal>
           </div>
 
@@ -101,7 +102,7 @@ export default function Features() {
           <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
             {services.map(({ icon: Icon, label, tag, description }, i) => (
               <Reveal key={label} delay={i * 60}>
-                <a
+                <SmoothLink
                   href="#contato"
                   className="group flex flex-col gap-5 bg-white border border-zinc-200 rounded-2xl p-6 h-full
                              hover:border-violet-200 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-violet-500/[0.06]
@@ -146,7 +147,7 @@ export default function Features() {
                     Saiba mais
                     <ArrowRight size={11} />
                   </div>
-                </a>
+                </SmoothLink>
               </Reveal>
             ))}
           </div>

@@ -1,4 +1,5 @@
 import ActionButton from './ui/ActionButton';
+import SmoothLink from './ui/SmoothLink';
 import { ArrowRight, Star } from 'lucide-react';
 
 const stats = [
@@ -86,7 +87,7 @@ export default function Hero() {
                   style={{ animation: 'var(--animate-fade-in-up-d3)' }}
                 >
                   <ActionButton label="Iniciar projeto" href="#contato" />
-                  <a
+                  <SmoothLink
                     href="#servicos"
                     className="group flex items-center gap-2 text-sm font-medium text-white/60 hover:text-white transition-colors duration-200"
                   >
@@ -95,7 +96,7 @@ export default function Hero() {
                       size={14}
                       className="opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all duration-200"
                     />
-                  </a>
+                  </SmoothLink>
                 </div>
               </div>
 

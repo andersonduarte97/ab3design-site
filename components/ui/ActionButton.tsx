@@ -1,4 +1,7 @@
+"use client";
+
 import { ArrowRight } from 'lucide-react';
+import { scrollTo } from '@/lib/scrollTo';
 
 interface ActionButtonProps {
   label: string;
@@ -10,6 +13,7 @@ export default function ActionButton({ label, href = '#', dark = false }: Action
   return (
     <a
       href={href}
+      onClick={(e) => scrollTo(e, href)}
       className={`group inline-flex items-center gap-3 rounded-full pl-6 pr-2 py-2 shrink-0 transition-transform duration-300 hover:scale-105 ${
         dark ? 'bg-zinc-900' : 'bg-[#F59E0B]'
       }`}
@@ -24,10 +28,7 @@ export default function ActionButton({ label, href = '#', dark = false }: Action
             : 'bg-zinc-900 group-hover:bg-zinc-800'
         }`}
       >
-        <ArrowRight
-          size={16}
-          className="text-white"
-        />
+        <ArrowRight size={16} className="text-white" />
       </span>
     </a>
   );
