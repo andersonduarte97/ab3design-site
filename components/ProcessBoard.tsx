@@ -8,27 +8,27 @@ import { scrollTo } from "@/lib/scrollTo";
 
 const ITEMS = [
   {
-    label: "Briefing detalhado",
-    desc: "Entendemos seu negócio, público e objetivos antes de escrever uma linha.",
+    label: "Briefing e estratégia",
+    desc: "Entendemos seu negócio, público e objetivo antes de criar qualquer coisa — site, apresentação ou automação.",
   },
   {
-    label: "Desenvolvimento ágil",
-    desc: "Ciclos curtos, feedback contínuo e entregas parciais para você acompanhar.",
+    label: "Design e narrativa sob medida",
+    desc: "Cada projeto é único. Criamos a identidade visual, a estrutura e o conteúdo certos para o que você precisa comunicar.",
   },
   {
-    label: "Deploy & suporte",
-    desc: "Projeto no ar com monitoramento, ajustes e suporte pós-lançamento inclusos.",
+    label: "Entrega e suporte",
+    desc: "Revisões inclusas, ajustes sem custo extra e suporte pós-entrega para garantir que tudo funcione como esperado.",
   },
 ];
 
 const INCLUDED = [
-  "Design exclusivo",
-  "Código limpo e documentado",
-  "Responsivo em todos os dispositivos",
+  "Design exclusivo e personalizado",
+  "Narrativa construída para seu público",
+  "Apresentações institucionais e de produto",
+  "Sites e landing pages que convertem",
+  "Automações e integrações sob medida",
   "SEO técnico configurado",
-  "Integração com analytics",
-  "Painel de edição de conteúdo",
-  "3 rodadas de revisão",
+  "3 rodadas de revisão inclusas",
   "30 dias de suporte pós-entrega",
 ];
 
@@ -57,16 +57,19 @@ export default function ProcessBoard() {
             className="text-xs font-bold tracking-[0.2em] uppercase mb-4"
             style={{ color: "#7C3AED" }}
           >
-            Do briefing ao deploy
+            Feito sob medida para o seu negócio
           </p>
           <h2
             className="text-4xl md:text-5xl font-medium text-zinc-900 leading-[1.05] max-w-lg"
             style={{ letterSpacing: "-0.04em" }}
           >
-            Seu projeto
+            Apresentações que
             <br />
-            em movimento.
+            vendem por você.
           </h2>
+          <p className="text-zinc-500 text-sm leading-relaxed mt-5 max-w-md font-light">
+            Criamos apresentações institucionais, de produtos e de serviços que comunicam o valor da sua empresa com clareza e impacto visual. Cada detalhe é pensado para o seu público, do design à narrativa.
+          </p>
         </Reveal>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">

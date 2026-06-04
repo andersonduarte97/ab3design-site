@@ -48,7 +48,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               {/* WhatsApp — primary */}
               <a
-                href="https://wa.me/55SEU_NUMERO?text=Ol%C3%A1%21+Vim+pelo+site+e+quero+saber+mais+sobre+os+servi%C3%A7os+da+AB3Design."
+                href="https://wa.me/5513981809035?text=Ol%C3%A1%21+Vim+pelo+site+e+gostaria+de+saber+mais+sobre+os+servi%C3%A7os+da+AB3Design."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-3 rounded-full pl-6 pr-2 py-2 hover:scale-105 transition-transform duration-300"

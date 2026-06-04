@@ -49,10 +49,10 @@ const services: Service[] = [
   },
   {
     icon: BarChart2,
-    label: 'Dashboards',
-    tag: 'Dados',
+    label: 'Dashboards & Apresentações',
+    tag: 'Dados & Pitch',
     description:
-      'Painéis personalizados que consolidam dados de múltiplas fontes e entregam os indicadores certos para decisões mais rápidas.',
+      'Painéis de dados sob medida e apresentações institucionais que comunicam resultados, vendem ideias e representam sua marca com profissionalismo.',
   },
   {
     icon: Layers,

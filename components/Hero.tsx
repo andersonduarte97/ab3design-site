@@ -1,14 +1,13 @@
 "use client";
 
 import ActionButton from './ui/ActionButton';
-import SmoothLink from './ui/SmoothLink';
 import { Typewriter } from './ui/typewriter-text';
-import { ArrowRight, Star } from 'lucide-react';
+import { Star } from 'lucide-react';
 
 const stats = [
-  { metric: '50+',  label: 'Projetos entregues' },
   { metric: '100%', label: 'Clientes satisfeitos' },
-  { metric: '14d',  label: 'Prazo médio' },
+  { metric: '14d',  label: 'Prazo médio de entrega' },
+  { metric: '3×',   label: 'Revisões por projeto' },
 ];
 
 const phrases = [
@@ -114,16 +113,6 @@ export default function Hero() {
                   style={{ animation: 'var(--animate-fade-in-up-d3)' }}
                 >
                   <ActionButton label="Iniciar projeto" href="#contato" />
-                  <SmoothLink
-                    href="#servicos"
-                    className="group flex items-center gap-2 text-sm font-medium text-white/60 hover:text-white transition-colors duration-200"
-                  >
-                    Ver serviços
-                    <ArrowRight
-                      size={14}
-                      className="opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all duration-200"
-                    />
-                  </SmoothLink>
                 </div>
               </div>
 
