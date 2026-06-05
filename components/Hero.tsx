@@ -116,9 +116,9 @@ export default function Hero() {
                 </div>
               </div>
 
-              {/* Right — browser mockup (all screens) */}
+              {/* Right — browser mockup (desktop only) */}
               <div
-                className="shrink-0 relative w-full flex justify-center lg:w-auto lg:block"
+                className="shrink-0 hidden lg:block relative"
                 style={{ animation: 'var(--animate-fade-in-up-d2)' }}
               >
                 <div
@@ -129,7 +129,7 @@ export default function Hero() {
                   }}
                 />
                 <div
-                  className="relative w-[280px] sm:w-[340px] lg:w-[400px] rounded-[1.5rem] overflow-hidden"
+                  className="relative w-[400px] rounded-[1.5rem] overflow-hidden"
                   style={{
                     background: '#0D1526',
                     border: '1px solid rgba(255,255,255,0.09)',
@@ -137,15 +137,15 @@ export default function Hero() {
                     transform: 'perspective(1200px) rotateY(-5deg) rotateX(2deg)',
                   }}
                 >
-                  <div className="flex items-center gap-2 px-3 sm:px-4 py-2.5 sm:py-3" style={{ background: '#07090F', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
-                    <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full" style={{ background: '#FF5F57' }} />
-                    <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full" style={{ background: '#FEBC2E' }} />
-                    <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full" style={{ background: '#28C840' }} />
-                    <div className="flex-1 mx-2 sm:mx-3 h-5 rounded-md px-3 flex items-center" style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.06)' }}>
-                      <span className="text-[8px] sm:text-[9px] text-white/25 font-mono">seusite.com.br</span>
+                  <div className="flex items-center gap-2 px-4 py-3" style={{ background: '#07090F', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+                    <span className="w-2.5 h-2.5 rounded-full" style={{ background: '#FF5F57' }} />
+                    <span className="w-2.5 h-2.5 rounded-full" style={{ background: '#FEBC2E' }} />
+                    <span className="w-2.5 h-2.5 rounded-full" style={{ background: '#28C840' }} />
+                    <div className="flex-1 mx-3 h-5 rounded-md px-3 flex items-center" style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.06)' }}>
+                      <span className="text-[9px] text-white/25 font-mono">seusite.com.br</span>
                     </div>
                   </div>
-                  <div className="p-3 sm:p-5 space-y-3 sm:space-y-4">
+                  <div className="p-5 space-y-4">
                     <div className="flex items-center justify-between">
                       <div className="h-3 w-14 rounded-md" style={{ background: 'rgba(255,255,255,0.12)' }} />
                       <div className="flex gap-2">
@@ -153,32 +153,32 @@ export default function Hero() {
                           <div key={i} className={`h-2 w-${w} rounded`} style={{ background: 'rgba(255,255,255,0.07)' }} />
                         ))}
                       </div>
-                      <div className="h-5 w-16 sm:h-6 sm:w-20 rounded-full" style={{ background: '#7C3AED' }} />
+                      <div className="h-6 w-20 rounded-full" style={{ background: '#7C3AED' }} />
                     </div>
-                    <div className="rounded-xl p-3 sm:p-5" style={{ background: 'linear-gradient(135deg, #1E293B 0%, #0F172A 100%)', border: '1px solid rgba(255,255,255,0.06)' }}>
+                    <div className="rounded-xl p-5" style={{ background: 'linear-gradient(135deg, #1E293B 0%, #0F172A 100%)', border: '1px solid rgba(255,255,255,0.06)' }}>
                       <div className="h-2.5 w-20 rounded mb-2.5" style={{ background: 'rgba(124,58,237,0.45)' }} />
-                      <div className="h-4 sm:h-5 w-3/4 sm:w-44 rounded mb-1.5" style={{ background: 'rgba(255,255,255,0.15)' }} />
-                      <div className="h-4 sm:h-5 w-1/2 sm:w-32 rounded mb-3 sm:mb-4" style={{ background: 'rgba(245,158,11,0.55)' }} />
+                      <div className="h-5 w-44 rounded mb-1.5" style={{ background: 'rgba(255,255,255,0.15)' }} />
+                      <div className="h-5 w-32 rounded mb-4" style={{ background: 'rgba(245,158,11,0.55)' }} />
                       <div className="h-2 w-full rounded mb-1.5" style={{ background: 'rgba(255,255,255,0.05)' }} />
-                      <div className="h-2 w-4/5 rounded mb-4 sm:mb-5" style={{ background: 'rgba(255,255,255,0.04)' }} />
-                      <div className="h-7 w-24 sm:h-8 sm:w-28 rounded-full" style={{ background: '#F59E0B' }} />
+                      <div className="h-2 w-4/5 rounded mb-5" style={{ background: 'rgba(255,255,255,0.04)' }} />
+                      <div className="h-8 w-28 rounded-full" style={{ background: '#F59E0B' }} />
                     </div>
-                    <div className="grid grid-cols-3 gap-1.5 sm:gap-2">
+                    <div className="grid grid-cols-3 gap-2">
                       {[0, 1, 2].map((i) => (
-                        <div key={i} className="rounded-lg p-2 sm:p-3" style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.06)' }}>
-                          <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-md mb-1.5 sm:mb-2" style={{ background: `rgba(124,58,237,${0.2 + i * 0.07})` }} />
+                        <div key={i} className="rounded-lg p-3" style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.06)' }}>
+                          <div className="w-6 h-6 rounded-md mb-2" style={{ background: `rgba(124,58,237,${0.2 + i * 0.07})` }} />
                           <div className="h-1.5 w-full rounded mb-1" style={{ background: 'rgba(255,255,255,0.1)' }} />
                           <div className="h-1.5 w-3/4 rounded" style={{ background: 'rgba(255,255,255,0.06)' }} />
                         </div>
                       ))}
                     </div>
                   </div>
-                  <div className="px-3 sm:px-5 pb-3 sm:pb-4 flex items-center justify-between" style={{ borderTop: '1px solid rgba(255,255,255,0.05)' }}>
-                    <div className="flex items-center gap-1.5 sm:gap-2 pt-2.5 sm:pt-3">
+                  <div className="px-5 pb-4 flex items-center justify-between" style={{ borderTop: '1px solid rgba(255,255,255,0.05)' }}>
+                    <div className="flex items-center gap-2 pt-3">
                       <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: '#28C840' }} />
-                      <span className="text-[8px] sm:text-[9px] font-mono text-white/35">Live · 1.2k visitas hoje</span>
+                      <span className="text-[9px] font-mono text-white/35">Live · 1.2k visitas hoje</span>
                     </div>
-                    <div className="flex items-center gap-0.5 pt-2.5 sm:pt-3">
+                    <div className="flex items-center gap-0.5 pt-3">
                       {[0, 1, 2, 3, 4].map((i) => <Star key={i} size={8} fill="#F59E0B" stroke="none" />)}
                     </div>
                   </div>
