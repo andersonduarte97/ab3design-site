@@ -135,7 +135,7 @@ export default function Navbar() {
             href="#contato"
             onClick={(e) => handleNavClick(e, '#contato')}
             className="flex items-center justify-center w-full rounded-full py-4 font-semibold text-base transition-transform duration-200 active:scale-95"
-            style={{ background: '#F59E0B', color: '#000' }}
+            style={{ background: '#06B6D4', color: '#000' }}
           >
             Iniciar projeto
           </a>

@@ -15,7 +15,7 @@ export default function ActionButton({ label, href = '#', dark = false }: Action
       href={href}
       onClick={(e) => scrollTo(e, href)}
       className={`group inline-flex items-center gap-3 rounded-full pl-6 pr-2 py-2 shrink-0 transition-transform duration-300 hover:scale-105 ${
-        dark ? 'bg-zinc-900' : 'bg-[#F59E0B]'
+        dark ? 'bg-zinc-900' : 'bg-[#06B6D4]'
       }`}
     >
       <span className={`font-medium text-sm whitespace-nowrap ${dark ? 'text-white' : 'text-zinc-900'}`}>

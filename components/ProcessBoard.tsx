@@ -81,7 +81,7 @@ function SlideMockup() {
           bottom: "5%",
           left: "-5%",
           background:
-            "radial-gradient(circle, rgba(37,99,235,0.18) 0%, transparent 70%)",
+            "radial-gradient(circle, rgba(6,182,212,0.18) 0%, transparent 70%)",
           filter: "blur(30px)",
         }}
       />
@@ -123,7 +123,7 @@ function SlideMockup() {
             />
             <div
               className="h-4 w-[60%] rounded mb-5"
-              style={{ background: "rgba(245,158,11,0.5)" }}
+              style={{ background: "rgba(6,182,212,0.5)" }}
             />
 
             {/* Paragraph lines */}
@@ -143,7 +143,7 @@ function SlideMockup() {
             {/* Mini CTA */}
             <div
               className="h-7 w-24 rounded-full"
-              style={{ background: "#F59E0B" }}
+              style={{ background: "#06B6D4" }}
             />
           </div>
 
@@ -416,7 +416,7 @@ export default function ProcessBoard() {
                   href="#contato"
                   onClick={(e) => scrollTo(e, "#contato")}
                   className="group inline-flex items-center gap-3 rounded-full pl-6 pr-2 py-2 hover:scale-105 transition-transform duration-300"
-                  style={{ background: "#F59E0B" }}
+                  style={{ background: "#06B6D4" }}
                 >
                   <span className="font-medium text-sm text-zinc-900">
                     Solicitar apresentação

@@ -19,13 +19,14 @@
   --color-zinc-950: #0F172A;   /* navy 950 — fundo mais escuro              */
 
   /* Tokens extras para uso explícito */
-  --color-brand:     #7C3AED;  /* roxo — identidade primária                */
-  --color-brand-blue:#2563EB;  /* azul — tech, links, interações            */
-  --color-brand-cta: #F59E0B;  /* âmbar/laranja — CTAs e destaques          */
-  --color-muted:     #94A3B8;  /* cinza azulado — textos e detalhes sutis   */
-  --color-surface:   #F3F3F3;  /* cinza claro — superfícies claras          */
-  --color-navy:      #0F172A;  /* azul escuro — fundo institucional         */
-  --color-site-dark: #121212;  /* preto exclusivo da seção sites            */
+  --color-brand:         #7C3AED;  /* roxo — identidade primária                */
+  --color-brand-blue:    #06B6D4;  /* turquesa/cyan — tech, links, interações   */
+  --color-brand-crimson: #6C043A;  /* vinho/crimson — detalhe de identidade     */
+  --color-brand-cta:     #06B6D4;  /* turquesa/cyan — CTAs e destaques          */
+  --color-muted:         #94A3B8;  /* cinza azulado — textos e detalhes sutis   */
+  --color-surface:       #F3F3F3;  /* cinza claro — superfícies claras          */
+  --color-navy:          #0F172A;  /* azul escuro — fundo institucional         */
+  --color-site-dark:     #121212;  /* preto exclusivo da seção sites            */
 
   --font-inter: 'Inter', sans-serif;
 
@@ -123,3 +124,16 @@ body {
   background-color: rgba(124,58,237,0.03) !important;
   box-shadow:       0 20px 56px rgba(124,58,237,0.12) !important;
 }
+
+/* ── Mockup shimmer — subtle loading bar effect ────────────────────── */
+.mockup-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0.07) 0%,
+    rgba(255,255,255,0.14) 50%,
+    rgba(255,255,255,0.07) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2.5s ease-in-out infinite;
+}
+

@@ -49,7 +49,7 @@ export default function AutomationSection() {
       <div className="max-w-[1600px] mx-auto">
         {/* Header */}
         <Reveal className="mb-16">
-          <p className="text-xs font-bold tracking-[0.2em] uppercase text-blue-400 mb-4">
+          <p className="text-xs font-bold tracking-[0.2em] uppercase mb-4" style={{ color: '#7C3AED' }}>
             Chatbots & Automações
           </p>
           <h2
@@ -58,7 +58,7 @@ export default function AutomationSection() {
           >
             Atenda mais,
             <br />
-            <span style={{ color: '#2563EB' }}>trabalhe menos.</span>
+            <span style={{ color: '#06B6D4' }}>trabalhe menos.</span>
           </h2>
         </Reveal>
 
@@ -71,11 +71,11 @@ export default function AutomationSection() {
                   <span
                     className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 mt-0.5"
                     style={{
-                      background: 'rgba(37,99,235,0.10)',
-                      border: '1px solid rgba(37,99,235,0.18)',
+                      background: 'rgba(6,182,212,0.10)',
+                      border: '1px solid rgba(6,182,212,0.18)',
                     }}
                   >
-                    <Icon size={18} style={{ color: '#2563EB' }} />
+                    <Icon size={18} style={{ color: '#06B6D4' }} />
                   </span>
                   <div>
                     <h3 className="text-base font-semibold text-white mb-1">{title}</h3>
@@ -109,9 +109,9 @@ export default function AutomationSection() {
               >
                 <div
                   className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0"
-                  style={{ background: 'rgba(37,99,235,0.15)', border: '1px solid rgba(37,99,235,0.2)' }}
+                  style={{ background: 'rgba(6,182,212,0.15)', border: '1px solid rgba(6,182,212,0.2)' }}
                 >
-                  <Bot size={16} style={{ color: '#2563EB' }} />
+                  <Bot size={16} style={{ color: '#06B6D4' }} />
                 </div>
                 <div className="flex-1">
                   <p className="text-sm font-semibold text-white leading-tight">AB3 Bot</p>
@@ -121,8 +121,8 @@ export default function AutomationSection() {
                   </div>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <Sparkles size={12} style={{ color: '#2563EB' }} />
-                  <span className="text-[10px] font-semibold" style={{ color: '#2563EB' }}>IA</span>
+                  <Sparkles size={12} style={{ color: '#06B6D4' }} />
+                  <span className="text-[10px] font-semibold" style={{ color: '#06B6D4' }}>IA</span>
                 </div>
               </div>
 
@@ -137,7 +137,7 @@ export default function AutomationSection() {
                       className="max-w-[78%] rounded-2xl px-4 py-2.5 text-sm leading-relaxed"
                       style={
                         msg.from === 'user'
-                          ? { background: '#2563EB', color: 'white', borderBottomRightRadius: 4 }
+                          ? { background: '#06B6D4', color: 'white', borderBottomRightRadius: 4 }
                           : {
                               background: 'rgba(255,255,255,0.06)',
                               color: 'rgba(255,255,255,0.85)',
@@ -193,7 +193,7 @@ export default function AutomationSection() {
                   </span>
                   <div
                     className="w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
-                    style={{ background: '#2563EB' }}
+                    style={{ background: '#06B6D4' }}
                   >
                     <ArrowRight size={12} className="text-white" />
                   </div>

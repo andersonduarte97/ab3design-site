@@ -1,3 +1,4 @@
+
 import {
   Palette,
   Layout,
@@ -46,12 +47,12 @@ const services = [
 ];
 
 const swatches = [
-  { hex: '#7C3AED' },
-  { hex: '#2563EB' },
-  { hex: '#F59E0B' },
-  { hex: '#0F172A' },
-  { hex: '#94A3B8' },
-  { hex: '#E2E8F0', border: true },
+  { name: 'Crimson',   hex: '#6C043A' },
+  { name: 'Purple',    hex: '#7C3AED' },
+  { name: 'Turquoise', hex: '#06B6D4' },
+  { name: 'Navy',      hex: '#0F172A' },
+  { name: 'Muted',     hex: '#94A3B8' },
+  { name: 'Light',     hex: '#F3F3F3' },
 ];
 
 // 9 posts — mistura de fotos reais (picsum) e posts estilizados
@@ -60,15 +61,15 @@ type FeedPost =
   | { type: 'styled'; bg: string; text?: string | null; sub?: string | null; shape?: boolean; dark?: boolean };
 
 const feedPosts: FeedPost[] = [
-  { type: 'img',    src: 'https://picsum.photos/seed/brand11/300/300' },
-  { type: 'styled', bg: 'linear-gradient(135deg, #7C3AED, #2563EB)',   text: 'Lançamento', sub: 'Nov 24' },
-  { type: 'img',    src: 'https://picsum.photos/seed/studio22/300/300' },
+  { type: 'img',    src: '/images/feed/workspace.png' },
+  { type: 'styled', bg: 'linear-gradient(135deg, #7C3AED, #06B6D4)',   text: 'Lançamento', sub: 'Nov 24' },
+  { type: 'img',    src: '/images/feed/mobile.png' },
   { type: 'styled', bg: 'linear-gradient(135deg, #1E293B, #0F172A)',   text: 'ab3',        sub: 'Design' },
-  { type: 'img',    src: 'https://picsum.photos/seed/creative33/300/300' },
-  { type: 'styled', bg: 'linear-gradient(135deg, #F59E0B, #F97316)',   text: '98%',        sub: 'Performance' },
-  { type: 'img',    src: 'https://picsum.photos/seed/workspace44/300/300' },
-  { type: 'styled', bg: 'linear-gradient(135deg, #7C3AED, #4F46E5)',   text: 'Brand\nKit', sub: null },
-  { type: 'styled', bg: 'linear-gradient(135deg, #0A0F1E, #1E293B)',   text: null, shape: true },
+  { type: 'img',    src: '/images/feed/branding.png' },
+  { type: 'styled', bg: 'linear-gradient(135deg, #6C043A, #06B6D4)',   text: '98%',        sub: 'Performance' },
+  { type: 'img',    src: '/images/feed/social.png' },
+  { type: 'styled', bg: 'linear-gradient(135deg, #6C043A, #7C3AED)',   text: 'Brand\nKit', sub: null },
+  { type: 'img',    src: '/images/feed/ui-design.png' },
 ];
 
 const formats = [
@@ -160,18 +161,20 @@ export default function DesignSection() {
             <div className="bg-white border border-zinc-200 rounded-[2rem] overflow-hidden shadow-sm">
               {/* Profile header */}
               <div className="px-5 pt-5 pb-4 flex items-center gap-3 border-b border-zinc-100">
-                {/* Avatar com ring */}
+                {/* Avatar com ring + logo */}
                 <div
                   className="w-11 h-11 rounded-full p-[2px] shrink-0"
                   style={{
-                    background: 'linear-gradient(135deg, #F59E0B, #7C3AED, #2563EB)',
+                    background: 'linear-gradient(135deg, #6C043A, #7C3AED, #06B6D4)',
                   }}
                 >
                   <div
-                    className="w-full h-full rounded-full flex items-center justify-center"
-                    style={{ background: '#0F172A' }}
+                    className="w-full h-full rounded-full bg-white flex items-center justify-center"
                   >
-                    <span className="text-[10px] font-bold text-white tracking-tight">ab3</span>
+                    <span className="text-[14px] font-black tracking-tighter select-none font-sans">
+                      <span className="text-zinc-900">ab</span>
+                      <span style={{ color: '#7C3AED' }}>3</span>
+                    </span>
                   </div>
                 </div>
                 <div className="flex-1 min-w-0">
@@ -283,7 +286,7 @@ export default function DesignSection() {
                       style={{
                         width: f.w,
                         height: f.h,
-                        background: 'linear-gradient(135deg, rgba(124,58,237,0.14), rgba(37,99,235,0.08))',
+                        background: 'linear-gradient(135deg, rgba(124,58,237,0.14), rgba(6,182,212,0.08))',
                         border: '1px solid rgba(124,58,237,0.22)',
                       }}
                     />
@@ -326,66 +329,99 @@ export default function DesignSection() {
             </div>
 
             {/* Brand kit card */}
-            <div className="bg-white border border-zinc-200 rounded-2xl overflow-hidden shadow-sm">
+            <div className="bg-white border border-zinc-200 rounded-[2rem] overflow-hidden shadow-sm">
               {/* Dark brand showcase */}
               <div
-                className="relative h-36 flex items-center justify-center overflow-hidden"
+                className="relative h-40 flex items-center justify-center overflow-hidden"
                 style={{ background: 'linear-gradient(135deg, #0F172A 0%, #1E1B4B 100%)' }}
               >
-                <div
-                  className="absolute top-4 right-6 w-20 h-20 rounded-full border opacity-20"
-                  style={{ borderColor: '#7C3AED', background: 'rgba(124,58,237,0.08)' }}
-                />
-                <div
-                  className="absolute -bottom-3 left-5 w-12 h-12 rounded-xl border opacity-20"
-                  style={{ borderColor: '#2563EB' }}
-                />
-                <div className="text-center z-10">
+                {/* SVG design grid/blueprint lines */}
+                <svg className="absolute inset-0 w-full h-full opacity-20 pointer-events-none" stroke="rgba(255,255,255,0.12)" strokeWidth="0.5" fill="none">
+                  {/* Construction circles */}
+                  <circle cx="50%" cy="50%" r="55" stroke="#7C3AED" strokeWidth="0.75" strokeDasharray="3 3" />
+                  <circle cx="50%" cy="50%" r="38" stroke="#06B6D4" strokeWidth="0.75" />
+                  {/* Axis lines */}
+                  <line x1="0" y1="50%" x2="100%" y2="50%" />
+                  <line x1="50%" y1="0" x2="50%" y2="100%" />
+                  {/* Diagonal lines */}
+                  <line x1="0" y1="0" x2="100%" y2="100%" strokeDasharray="2 4" stroke="rgba(255,255,255,0.08)" />
+                  <line x1="0" y1="100%" x2="100%" y2="0" strokeDasharray="2 4" stroke="rgba(255,255,255,0.08)" />
+                </svg>
+
+                {/* Floating Glass Logo Plate */}
+                <div className="bg-slate-950/45 backdrop-blur-md border border-white/5 rounded-2xl px-6 py-3.5 text-center z-10 shadow-lg shadow-black/30">
                   <div className="flex items-center gap-1 justify-center mb-1">
-                    <span className="text-2xl font-bold text-white tracking-tight">ab3</span>
-                    <span className="text-2xl font-bold tracking-tight" style={{ color: '#7C3AED' }}>
+                    <span className="text-2xl font-black text-white tracking-tighter font-sans">ab3</span>
+                    <span className="text-2xl font-black tracking-tighter font-sans" style={{ color: '#7C3AED' }}>
                       Design
                     </span>
                   </div>
-                  <span className="text-[10px] text-white/30 tracking-[0.18em] uppercase font-light">
+                  <span className="text-[9px] text-white/40 tracking-[0.2em] uppercase font-bold font-sans">
                     Brand Identity
                   </span>
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-white to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-white/5 to-transparent" />
               </div>
 
-              <div className="px-5 py-4">
-                {/* Swatches */}
-                <p className="text-[11px] font-semibold text-zinc-400 uppercase tracking-wider mb-2">
-                  Paleta
+              <div className="px-5 py-5">
+                {/* Pantone Swatches */}
+                <p className="text-[11px] font-bold text-zinc-400 uppercase tracking-widest mb-3 select-none">
+                  Paleta de Cores
                 </p>
-                <div className="flex gap-2 mb-4">
+                <div className="grid grid-cols-3 sm:grid-cols-6 gap-2 mb-5">
                   {swatches.map((c, i) => (
                     <div
                       key={i}
-                      className="flex-1 h-8 rounded-lg"
-                      style={{
-                        background: c.hex,
-                        border: c.border ? '1px solid #e2e8f0' : undefined,
-                      }}
-                    />
+                      className="group relative bg-white border border-zinc-200/80 rounded-xl overflow-hidden shadow-xs hover:-translate-y-1 hover:shadow-md transition-all duration-300 cursor-pointer"
+                    >
+                      {/* Color block */}
+                      <div
+                        className="h-10 w-full group-hover:brightness-95 transition-all duration-300"
+                        style={{
+                          background: c.hex,
+                        }}
+                      />
+                      {/* Pantone label info */}
+                      <div className="p-1.5 text-center bg-white border-t border-zinc-100 select-all">
+                        <p className="text-[8px] font-bold text-zinc-800 tracking-tight leading-none mb-0.5 truncate">
+                          {c.name}
+                        </p>
+                        <p className="text-[7px] text-zinc-400 font-mono leading-none">
+                          {c.hex}
+                        </p>
+                      </div>
+                    </div>
                   ))}
                 </div>
 
-                {/* Typography */}
-                <div className="bg-zinc-50 border border-zinc-100 rounded-xl p-3">
-                  <p
-                    className="text-xl font-bold text-zinc-900 leading-none mb-1"
-                    style={{ letterSpacing: '-0.03em' }}
-                  >
-                    Inter Display
-                  </p>
-                  <div className="flex gap-3 mt-1.5">
-                    {['Light', 'Regular', 'Medium', 'Semibold', 'Bold'].map((w, i) => (
+                {/* Typography Specimen */}
+                <div className="bg-zinc-50 border border-zinc-200/60 rounded-2xl p-4 flex items-center justify-between">
+                  <div className="flex items-center gap-4">
+                    {/* Glyphs display */}
+                    <div className="w-14 h-14 bg-white border border-zinc-200/80 rounded-xl flex items-center justify-center shadow-xs shrink-0 select-none">
+                      <span className="text-3xl font-black text-zinc-900 tracking-tighter font-sans">
+                        Aa
+                      </span>
+                    </div>
+                    <div>
+                      <span className="text-[9px] font-bold text-zinc-400 uppercase tracking-widest leading-none block mb-1">
+                        Fonte Primária
+                      </span>
+                      <p className="text-lg font-extrabold text-zinc-900 leading-none mb-1.5 tracking-tight font-sans">
+                        Inter Display
+                      </p>
+                      <p className="text-[10px] text-zinc-400 font-mono">
+                        A-Z, a-z, 0-9
+                      </p>
+                    </div>
+                  </div>
+                  {/* Weights list */}
+                  <div className="flex flex-col gap-0.5 items-end text-[10px] text-zinc-500 select-none">
+                    {['Light', 'Regular', 'Medium', 'Bold'].map((w, i) => (
                       <span
                         key={w}
-                        className="text-[10px] text-zinc-500"
-                        style={{ fontWeight: [300, 400, 500, 600, 700][i] }}
+                        style={{ fontWeight: [300, 400, 500, 800][i] }}
+                        className="transition-colors hover:text-zinc-900"
                       >
                         {w}
                       </span>

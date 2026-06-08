@@ -27,7 +27,7 @@ const codeLines = [
   { indent: 1, content: 'cliente: "Você",',          color: 'text-violet-400' },
   { indent: 1, content: 'prazo: "conforme acordo",', color: 'text-blue-400' },
   { indent: 1, content: 'qualidade: "máxima",',      color: 'text-violet-400' },
-  { indent: 1, content: 'suporte: true,',            color: 'text-amber-400' },
+  { indent: 1, content: 'suporte: true,',            color: 'text-cyan-400' },
   { indent: 0, content: '}',                         color: 'text-white/80' },
   { indent: 0, content: '',                          color: '' },
   { indent: 0, content: 'await entregar(projeto)',   color: 'text-blue-300' },
@@ -43,7 +43,7 @@ export default function HowItWorks() {
       <div className="max-w-[1600px] mx-auto">
         {/* Header */}
         <Reveal className="mb-16">
-          <p className="text-xs font-bold tracking-[0.2em] uppercase text-violet-400 mb-4">
+          <p className="text-xs font-bold tracking-[0.2em] uppercase mb-4" style={{ color: '#7C3AED' }}>
             Processo
           </p>
           <h2

@@ -124,7 +124,7 @@ function AccordionItem({ client, isActive, onMouseEnter }: ItemProps) {
         className="absolute inset-0 pointer-events-none rounded-2xl transition-all duration-500"
         style={{
           boxShadow: isActive
-            ? 'inset 0 0 0 1px rgba(245,158,11,0.22)'
+            ? 'inset 0 0 0 1px rgba(6,182,212,0.22)'
             : 'inset 0 0 0 1px rgba(255,255,255,0.05)',
         }}
       />
@@ -133,15 +133,15 @@ function AccordionItem({ client, isActive, onMouseEnter }: ItemProps) {
       <div
         className="absolute top-4 right-4 w-8 h-8 rounded-xl flex items-center justify-center transition-all duration-400 z-20"
         style={{
-          background: isActive ? 'rgba(245,158,11,0.12)' : 'rgba(255,255,255,0.05)',
-          border: `1px solid ${isActive ? 'rgba(245,158,11,0.28)' : 'rgba(255,255,255,0.08)'}`,
+          background: isActive ? 'rgba(6,182,212,0.12)' : 'rgba(255,255,255,0.05)',
+          border: `1px solid ${isActive ? 'rgba(6,182,212,0.28)' : 'rgba(255,255,255,0.08)'}`,
           backdropFilter: 'blur(10px)',
         }}
       >
         <Icon
           size={14}
           style={{
-            color: isActive ? '#F59E0B' : 'rgba(255,255,255,0.28)',
+            color: isActive ? '#06B6D4' : 'rgba(255,255,255,0.28)',
             transition: 'color 400ms',
           }}
         />
@@ -169,8 +169,8 @@ function AccordionItem({ client, isActive, onMouseEnter }: ItemProps) {
         }}
       >
         {/* Segment tag */}
-        <span className="inline-flex items-center text-[9px] font-bold tracking-[0.18em] uppercase text-amber-400 mb-3">
-          <span className="w-3 h-px bg-amber-400/60 mr-2" />
+        <span className="inline-flex items-center text-[9px] font-bold tracking-[0.18em] uppercase mb-3" style={{ color: '#06B6D4' }}>
+          <span className="w-3 h-px mr-2" style={{ backgroundColor: 'rgba(6,182,212,0.6)' }} />
           {client.segment}
         </span>
 
@@ -199,7 +199,7 @@ function AccordionItem({ client, isActive, onMouseEnter }: ItemProps) {
           target="_blank"
           rel="noopener noreferrer"
           onClick={e => e.stopPropagation()}
-          className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-amber-400 hover:text-amber-300 transition-colors duration-200 group/link"
+          className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-[#06B6D4] hover:text-[#06B6D4]/85 transition-colors duration-200 group/link"
         >
           Ver site
           <ExternalLink
@@ -235,25 +235,25 @@ function MobileCard({ client }: { client: Client }) {
       {/* Border */}
       <div
         className="absolute inset-0 rounded-2xl pointer-events-none"
-        style={{ boxShadow: 'inset 0 0 0 1px rgba(245,158,11,0.18)' }}
+        style={{ boxShadow: 'inset 0 0 0 1px rgba(6,182,212,0.18)' }}
       />
 
       {/* Icon */}
       <div
         className="absolute top-3 right-3 w-7 h-7 rounded-lg flex items-center justify-center"
         style={{
-          background: 'rgba(245,158,11,0.12)',
-          border: '1px solid rgba(245,158,11,0.28)',
+          background: 'rgba(6,182,212,0.12)',
+          border: '1px solid rgba(6,182,212,0.28)',
           backdropFilter: 'blur(10px)',
         }}
       >
-        <Icon size={13} style={{ color: '#F59E0B' }} />
+        <Icon size={13} style={{ color: '#06B6D4' }} />
       </div>
 
       {/* Info */}
       <div className="absolute bottom-0 left-0 right-0 px-4 pb-4 z-10">
-        <span className="inline-flex items-center text-[9px] font-bold tracking-[0.18em] uppercase text-amber-400 mb-1.5">
-          <span className="w-3 h-px bg-amber-400/60 mr-2" />
+        <span className="inline-flex items-center text-[9px] font-bold tracking-[0.18em] uppercase mb-1.5" style={{ color: '#06B6D4' }}>
+          <span className="w-3 h-px mr-2" style={{ backgroundColor: 'rgba(6,182,212,0.6)' }} />
           {client.segment}
         </span>
         <div className="flex items-end justify-between gap-3">
@@ -267,7 +267,7 @@ function MobileCard({ client }: { client: Client }) {
             href={client.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="shrink-0 inline-flex items-center gap-1 text-[11px] font-semibold text-amber-400 pb-0.5"
+            className="shrink-0 inline-flex items-center gap-1 text-[11px] font-semibold text-[#06B6D4] pb-0.5"
           >
             Ver site
             <ExternalLink size={10} />

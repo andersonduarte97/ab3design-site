@@ -2,7 +2,7 @@
 
 import ActionButton from './ui/ActionButton';
 import { Typewriter } from './ui/typewriter-text';
-import { Star } from 'lucide-react';
+import MockupBrowser from './ui/MockupBrowser';
 
 const stats = [
   { metric: '100%', label: 'Clientes satisfeitos' },
@@ -46,14 +46,14 @@ export default function Hero() {
           <div style={{
             position: 'absolute', width: 420, height: 420,
             bottom: '8%', left: '3%', borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(37,99,235,0.18) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(6,182,212,0.18) 0%, transparent 70%)',
             filter: 'blur(60px)',
             animation: 'float-orb 18s ease-in-out infinite reverse',
           }} />
           <div style={{
             position: 'absolute', width: 280, height: 280,
             top: '38%', left: '32%', borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(245,158,11,0.08) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(108,4,58,0.16) 0%, transparent 70%)',
             filter: 'blur(50px)',
             animation: 'float-orb 22s ease-in-out infinite 5s',
           }} />
@@ -76,8 +76,8 @@ export default function Hero() {
 
                 {/* Eyebrow */}
                 <p
-                  className="text-[11px] font-bold tracking-[0.2em] uppercase text-violet-400 mb-5"
-                  style={{ animation: 'var(--animate-fade-in-up-d1)' }}
+                  className="text-[11px] font-bold tracking-[0.2em] uppercase mb-5"
+                  style={{ color: '#7C3AED', animation: 'var(--animate-fade-in-up-d1)' }}
                 >
                   Agência digital · AB3Design
                 </p>
@@ -89,7 +89,7 @@ export default function Hero() {
                 >
                   Você entende do negócio.
                   <br />
-                  <span style={{ color: '#F59E0B' }}>A gente faz o mundo entender.</span>
+                  <span style={{ color: '#06B6D4' }}>A gente faz o mundo entender.</span>
                 </h1>
 
                 {/* Typewriter rotativo */}
@@ -116,9 +116,9 @@ export default function Hero() {
                 </div>
               </div>
 
-              {/* Right — browser mockup (desktop only) */}
+              {/* Right — animated browser mockup (all screens) */}
               <div
-                className="shrink-0 hidden lg:block relative"
+                className="shrink-0 relative w-full flex justify-center lg:w-auto lg:block"
                 style={{ animation: 'var(--animate-fade-in-up-d2)' }}
               >
                 <div
@@ -128,61 +128,7 @@ export default function Hero() {
                     filter: 'blur(30px)', pointerEvents: 'none',
                   }}
                 />
-                <div
-                  className="relative w-[400px] rounded-[1.5rem] overflow-hidden"
-                  style={{
-                    background: '#0D1526',
-                    border: '1px solid rgba(255,255,255,0.09)',
-                    boxShadow: '0 40px 100px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.04) inset',
-                    transform: 'perspective(1200px) rotateY(-5deg) rotateX(2deg)',
-                  }}
-                >
-                  <div className="flex items-center gap-2 px-4 py-3" style={{ background: '#07090F', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
-                    <span className="w-2.5 h-2.5 rounded-full" style={{ background: '#FF5F57' }} />
-                    <span className="w-2.5 h-2.5 rounded-full" style={{ background: '#FEBC2E' }} />
-                    <span className="w-2.5 h-2.5 rounded-full" style={{ background: '#28C840' }} />
-                    <div className="flex-1 mx-3 h-5 rounded-md px-3 flex items-center" style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.06)' }}>
-                      <span className="text-[9px] text-white/25 font-mono">seusite.com.br</span>
-                    </div>
-                  </div>
-                  <div className="p-5 space-y-4">
-                    <div className="flex items-center justify-between">
-                      <div className="h-3 w-14 rounded-md" style={{ background: 'rgba(255,255,255,0.12)' }} />
-                      <div className="flex gap-2">
-                        {[10, 12, 10].map((w, i) => (
-                          <div key={i} className={`h-2 w-${w} rounded`} style={{ background: 'rgba(255,255,255,0.07)' }} />
-                        ))}
-                      </div>
-                      <div className="h-6 w-20 rounded-full" style={{ background: '#7C3AED' }} />
-                    </div>
-                    <div className="rounded-xl p-5" style={{ background: 'linear-gradient(135deg, #1E293B 0%, #0F172A 100%)', border: '1px solid rgba(255,255,255,0.06)' }}>
-                      <div className="h-2.5 w-20 rounded mb-2.5" style={{ background: 'rgba(124,58,237,0.45)' }} />
-                      <div className="h-5 w-44 rounded mb-1.5" style={{ background: 'rgba(255,255,255,0.15)' }} />
-                      <div className="h-5 w-32 rounded mb-4" style={{ background: 'rgba(245,158,11,0.55)' }} />
-                      <div className="h-2 w-full rounded mb-1.5" style={{ background: 'rgba(255,255,255,0.05)' }} />
-                      <div className="h-2 w-4/5 rounded mb-5" style={{ background: 'rgba(255,255,255,0.04)' }} />
-                      <div className="h-8 w-28 rounded-full" style={{ background: '#F59E0B' }} />
-                    </div>
-                    <div className="grid grid-cols-3 gap-2">
-                      {[0, 1, 2].map((i) => (
-                        <div key={i} className="rounded-lg p-3" style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.06)' }}>
-                          <div className="w-6 h-6 rounded-md mb-2" style={{ background: `rgba(124,58,237,${0.2 + i * 0.07})` }} />
-                          <div className="h-1.5 w-full rounded mb-1" style={{ background: 'rgba(255,255,255,0.1)' }} />
-                          <div className="h-1.5 w-3/4 rounded" style={{ background: 'rgba(255,255,255,0.06)' }} />
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="px-5 pb-4 flex items-center justify-between" style={{ borderTop: '1px solid rgba(255,255,255,0.05)' }}>
-                    <div className="flex items-center gap-2 pt-3">
-                      <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: '#28C840' }} />
-                      <span className="text-[9px] font-mono text-white/35">Live · 1.2k visitas hoje</span>
-                    </div>
-                    <div className="flex items-center gap-0.5 pt-3">
-                      {[0, 1, 2, 3, 4].map((i) => <Star key={i} size={8} fill="#F59E0B" stroke="none" />)}
-                    </div>
-                  </div>
-                </div>
+                <MockupBrowser />
               </div>
 
             </div>
