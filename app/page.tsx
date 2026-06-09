@@ -7,6 +7,7 @@ import HowItWorks from '@/components/HowItWorks';
 import AutomationSection from '@/components/AutomationSection';
 import ProcessBoard from '@/components/ProcessBoard';
 import Portfolio from '@/components/Portfolio';
+import ContactForm from '@/components/ContactForm';
 
 export default function Home() {
   return (
@@ -43,6 +44,16 @@ export default function Home() {
             <p className="text-[#64748B] text-sm mb-10 max-w-sm mx-auto">
               Sem enrolação. Sem compromisso. Só uma conversa honesta sobre o que você precisa.
             </p>
+
+            {/* Form */}
+            <ContactForm />
+
+            {/* Divider */}
+            <div className="flex items-center gap-4 max-w-xl mx-auto mt-8 mb-8">
+              <div className="flex-1 h-px bg-white/8" />
+              <span className="text-xs text-white/25">ou fale diretamente</span>
+              <div className="flex-1 h-px bg-white/8" />
+            </div>
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
