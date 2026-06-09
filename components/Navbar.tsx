@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import ActionButton from './ui/ActionButton';
 import { Menu, X } from 'lucide-react';
 import { scrollTo } from '@/lib/scrollTo';
@@ -51,7 +50,11 @@ export default function Navbar() {
           }`}
         >
           {/* Logo */}
-          <Link href="/" className="flex items-center transition-transform duration-300 hover:scale-102">
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="flex items-center transition-transform duration-300 hover:scale-105"
+            aria-label="Ir para o topo"
+          >
             <Image
               src="/images/logo.svg?v=2"
               alt="AB3Design"
@@ -60,7 +63,7 @@ export default function Navbar() {
               className="h-7 md:h-8 w-auto"
               priority
             />
-          </Link>
+          </button>
 
           {/* Desktop nav links */}
           <ul className="hidden md:flex items-center gap-1">
