@@ -118,7 +118,7 @@ export default function Hero() {
 
               {/* Right — animated browser mockup (all screens) */}
               <div
-                className="shrink-0 w-full flex justify-center lg:w-auto lg:block pb-2 lg:pb-0"
+                className="shrink-0 w-full hidden sm:flex justify-center lg:w-auto lg:block pb-2 lg:pb-0"
                 style={{ animation: 'var(--animate-fade-in-up-d2)' }}
               >
                 <div className="relative w-full max-w-[280px] sm:max-w-[340px] lg:max-w-none">
