@@ -156,13 +156,12 @@ export default function MockupBrowser() {
 
   return (
     <div
-      className="relative w-[280px] sm:w-[340px] lg:w-[400px] rounded-[1.5rem] overflow-hidden"
+      className="relative w-full max-w-[280px] sm:max-w-[340px] lg:w-[400px] lg:max-w-none rounded-[1.5rem] overflow-hidden mockup-3d"
       style={{
         background: '#0D1526',
         border: '1px solid rgba(255,255,255,0.09)',
         boxShadow:
           '0 40px 100px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.04) inset',
-        transform: 'perspective(1200px) rotateY(-5deg) rotateX(2deg)',
       }}
     >
       {/* ── Chrome bar ─────────────────────────────────────────────── */}

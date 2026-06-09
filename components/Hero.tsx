@@ -68,8 +68,8 @@ export default function Hero() {
         <div className="relative flex flex-col flex-1" style={{ zIndex: 1 }}>
 
           {/* Main content */}
-          <div className="flex-1 flex items-center px-6 lg:px-20 pt-14 lg:pt-20">
-            <div className="w-full flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+          <div className="flex-1 flex items-center px-6 lg:px-20 pt-10 lg:pt-20">
+            <div className="w-full flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
 
               {/* Left */}
               <div className="flex-1 min-w-0 w-full">
@@ -118,17 +118,22 @@ export default function Hero() {
 
               {/* Right — animated browser mockup (all screens) */}
               <div
-                className="shrink-0 relative w-full flex justify-center lg:w-auto lg:block"
+                className="shrink-0 w-full flex justify-center lg:w-auto lg:block pb-2 lg:pb-0"
                 style={{ animation: 'var(--animate-fade-in-up-d2)' }}
               >
-                <div
-                  style={{
-                    position: 'absolute', inset: '-40px', borderRadius: '3rem',
-                    background: 'radial-gradient(ellipse at center, rgba(124,58,237,0.18) 0%, transparent 70%)',
-                    filter: 'blur(30px)', pointerEvents: 'none',
-                  }}
-                />
-                <MockupBrowser />
+                <div className="relative w-full max-w-[280px] sm:max-w-[340px] lg:max-w-none">
+                  <div
+                    style={{
+                      position: 'absolute', inset: '-40px', borderRadius: '3rem',
+                      background: 'radial-gradient(ellipse at center, rgba(124,58,237,0.18) 0%, transparent 70%)',
+                      filter: 'blur(30px)', pointerEvents: 'none',
+                      zIndex: 0,
+                    }}
+                  />
+                  <div style={{ position: 'relative', zIndex: 1 }}>
+                    <MockupBrowser />
+                  </div>
+                </div>
               </div>
 
             </div>
