@@ -35,7 +35,7 @@ export default function ContactForm() {
     'w-full rounded-xl px-4 py-3 text-sm text-white bg-white/5 border border-white/10 placeholder-white/30 outline-none focus:border-violet-500/60 focus:bg-white/8 transition-colors duration-200';
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-xl mx-auto mt-10 text-left">
+    <form onSubmit={handleSubmit} className="w-full text-left">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <div className="flex flex-col gap-1.5">
           <label className="text-xs text-white/40 font-medium tracking-wide uppercase">Nome</label>
