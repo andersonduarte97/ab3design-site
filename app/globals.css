@@ -5,27 +5,27 @@
   /* emerald-400 remapeado para o roxo primário — cascateia por todo o site */
   --color-emerald-400: #7C3AED;
 
-  /* Tokens zinc remapeados para a nova paleta */
-  --color-zinc-50:  #F3F3F3;   /* cinza claro — áreas claras                */
-  --color-zinc-100: #F3F3F3;   /* cinza claro — áreas claras                */
-  --color-zinc-200: #E2E8F0;   /* slate-200 — bordas em fundo claro         */
-  --color-zinc-300: #CBD5E1;   /* slate-300 — hover bordas                  */
-  --color-zinc-400: #94A3B8;   /* slate-400 — textos secundários leves      */
-  --color-zinc-500: #94A3B8;   /* slate-400 — textos secundários            */
-  --color-zinc-600: #64748B;   /* slate-600 — textos escuros secundários    */
-  --color-zinc-700: #334155;   /* slate-700 — elementos de apoio            */
-  --color-zinc-800: #1E293B;   /* slate-800 / navy variant — cards escuros  */
-  --color-zinc-900: #0F172A;   /* navy 950 — fundo institucional escuro     */
-  --color-zinc-950: #0F172A;   /* navy 950 — fundo mais escuro              */
+  /* Tokens zinc para a nova paleta (cores neutras) */
+  --color-zinc-50:  #FAFAFA;
+  --color-zinc-100: #F4F4F5;
+  --color-zinc-200: #E4E4E7;
+  --color-zinc-300: #D4D4D8;
+  --color-zinc-400: #A1A1AA;
+  --color-zinc-500: #71717A;
+  --color-zinc-600: #52525B;
+  --color-zinc-700: #3F3F46;
+  --color-zinc-800: #27272A;
+  --color-zinc-900: #18181B;
+  --color-zinc-950: #09090B;
 
   /* Tokens extras para uso explícito */
   --color-brand:         #7C3AED;  /* roxo — identidade primária                */
   --color-brand-blue:    #06B6D4;  /* turquesa/cyan — tech, links, interações   */
   --color-brand-crimson: #6C043A;  /* vinho/crimson — detalhe de identidade     */
-  --color-brand-cta:     #06B6D4;  /* turquesa/cyan — CTAs e destaques          */
-  --color-muted:         #94A3B8;  /* cinza azulado — textos e detalhes sutis   */
-  --color-surface:       #F3F3F3;  /* cinza claro — superfícies claras          */
-  --color-navy:          #0F172A;  /* azul escuro — fundo institucional         */
+  --color-brand-cta:     #7C3AED;  /* purple — CTAs e destaques                 */
+  --color-muted:         #A1A1AA;  /* cinza — textos e detalhes sutis           */
+  --color-surface:       #FAFAFA;  /* cinza claro — superfícies claras          */
+  --color-navy:          #09090B;  /* substituído por black/zinc-950            */
   --color-site-dark:     #121212;  /* preto exclusivo da seção sites            */
 
   --font-inter: 'Inter', sans-serif;
@@ -70,7 +70,7 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
-  background: #0F172A;
+  background: #09090B;
   color: #ffffff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

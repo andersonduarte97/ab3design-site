@@ -38,7 +38,7 @@ export default function HowItWorks() {
     <section
       id="como-funciona"
       className="grain py-24 px-4"
-      style={{ background: 'linear-gradient(to bottom, #0F172A, #0D1526)' }}
+      style={{ background: 'linear-gradient(to bottom, #09090B, #0D1526)' }}
     >
       <div className="max-w-[1600px] mx-auto">
         {/* Header */}
@@ -93,9 +93,9 @@ export default function HowItWorks() {
               className="hidden md:block"
               style={{ transform: 'rotate(3deg)' }}
             >
-              <div className="bg-[#1E293B]/70 backdrop-blur-[12px] border border-white/10 rounded-2xl overflow-hidden shadow-2xl">
+              <div className="bg-[#18181B]/70 backdrop-blur-[12px] border border-white/10 rounded-2xl overflow-hidden shadow-2xl">
                 {/* Window chrome */}
-                <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-[#0F172A]/60">
+                <div className="flex items-center gap-2 px-4 py-3 border-b border-white/10 bg-[#09090B]/60">
                   <span className="w-3 h-3 rounded-full bg-red-500/70" />
                   <span className="w-3 h-3 rounded-full bg-yellow-500/70" />
                   <span className="w-3 h-3 rounded-full bg-green-500/70" />

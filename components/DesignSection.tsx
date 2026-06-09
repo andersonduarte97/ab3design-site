@@ -50,7 +50,7 @@ const swatches = [
   { name: 'Crimson',   hex: '#6C043A' },
   { name: 'Purple',    hex: '#7C3AED' },
   { name: 'Turquoise', hex: '#06B6D4' },
-  { name: 'Navy',      hex: '#0F172A' },
+  { name: 'Navy',      hex: '#09090B' },
   { name: 'Muted',     hex: '#94A3B8' },
   { name: 'Light',     hex: '#F3F3F3' },
 ];
@@ -64,7 +64,7 @@ const feedPosts: FeedPost[] = [
   { type: 'img',    src: '/images/feed/workspace.png' },
   { type: 'styled', bg: 'linear-gradient(135deg, #7C3AED, #06B6D4)',   text: 'Lançamento', sub: 'Nov 24' },
   { type: 'img',    src: '/images/feed/mobile.png' },
-  { type: 'styled', bg: 'linear-gradient(135deg, #1E293B, #0F172A)',   text: 'ab3',        sub: 'Design' },
+  { type: 'styled', bg: 'linear-gradient(135deg, #18181B, #09090B)',   text: 'ab3',        sub: 'Design' },
   { type: 'img',    src: '/images/feed/branding.png' },
   { type: 'styled', bg: 'linear-gradient(135deg, #6C043A, #06B6D4)',   text: '98%',        sub: 'Performance' },
   { type: 'img',    src: '/images/feed/social.png' },
@@ -304,7 +304,7 @@ export default function DesignSection() {
                   { label: 'Instagram', color: '#E1306C' },
                   { label: 'LinkedIn', color: '#0A66C2' },
                   { label: 'YouTube', color: '#FF0000' },
-                  { label: 'TikTok', color: '#0F172A' },
+                  { label: 'TikTok', color: '#09090B' },
                   { label: 'Pinterest', color: '#E60023' },
                   { label: 'WhatsApp', color: '#25D366' },
                   { label: 'Facebook', color: '#1877F2' },
@@ -333,7 +333,7 @@ export default function DesignSection() {
               {/* Dark brand showcase */}
               <div
                 className="relative h-40 flex items-center justify-center overflow-hidden"
-                style={{ background: 'linear-gradient(135deg, #0F172A 0%, #1E1B4B 100%)' }}
+                style={{ background: 'linear-gradient(135deg, #09090B 0%, #1E1B4B 100%)' }}
               >
                 {/* SVG design grid/blueprint lines */}
                 <svg className="absolute inset-0 w-full h-full opacity-20 pointer-events-none" stroke="rgba(255,255,255,0.12)" strokeWidth="0.5" fill="none">

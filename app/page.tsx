@@ -25,7 +25,7 @@ export default function Home() {
         <section
           id="contato"
           className="grain py-24 px-4"
-          style={{ background: 'linear-gradient(to bottom, #0F172A, #0A0F1E)' }}
+          style={{ background: 'linear-gradient(to bottom, #09090B, #0A0F1E)' }}
         >
           <div className="max-w-[1600px] mx-auto text-center">
             <p className="text-xs font-bold tracking-[0.2em] uppercase text-violet-400 mb-4">
@@ -84,7 +84,7 @@ export default function Home() {
                 </span>
                 <span
                   className="w-10 h-10 rounded-full flex items-center justify-center"
-                  style={{ background: '#0F172A' }}
+                  style={{ background: '#09090B' }}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

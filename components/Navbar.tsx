@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import ActionButton from './ui/ActionButton';
 import { Menu, X } from 'lucide-react';
 import { scrollTo } from '@/lib/scrollTo';
@@ -50,7 +51,7 @@ export default function Navbar() {
           }`}
         >
           {/* Logo */}
-          <a href="/" className="flex items-center transition-transform duration-300 hover:scale-102">
+          <Link href="/" className="flex items-center transition-transform duration-300 hover:scale-102">
             <Image
               src="/images/logo.svg?v=2"
               alt="AB3Design"
@@ -59,7 +60,7 @@ export default function Navbar() {
               className="h-7 md:h-8 w-auto"
               priority
             />
-          </a>
+          </Link>
 
           {/* Desktop nav links */}
           <ul className="hidden md:flex items-center gap-1">
@@ -135,7 +136,7 @@ export default function Navbar() {
             href="#contato"
             onClick={(e) => handleNavClick(e, '#contato')}
             className="flex items-center justify-center w-full rounded-full py-4 font-semibold text-base transition-transform duration-200 active:scale-95"
-            style={{ background: '#06B6D4', color: '#000' }}
+            style={{ background: '#7C3AED', color: '#fff' }}
           >
             Iniciar projeto
           </a>

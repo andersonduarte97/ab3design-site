@@ -1,4 +1,4 @@
-import { MessageSquare, MessagesSquare, Bot, Zap, ArrowRight, CheckCircle2, Sparkles } from 'lucide-react';
+import { MessageSquare, MessagesSquare, Bot, Zap, ArrowRight, Sparkles } from 'lucide-react';
 import ActionButton from './ui/ActionButton';
 import Reveal from './ui/Reveal';
 
@@ -44,12 +44,12 @@ export default function AutomationSection() {
     <section
       id="automacao"
       className="grain py-24 px-4"
-      style={{ background: 'linear-gradient(to bottom, #0A0F1E, #0F172A)' }}
+      style={{ background: 'linear-gradient(to bottom, #0A0F1E, #09090B)' }}
     >
       <div className="max-w-[1600px] mx-auto">
         {/* Header */}
         <Reveal className="mb-16">
-          <p className="text-xs font-bold tracking-[0.2em] uppercase mb-4" style={{ color: '#7C3AED' }}>
+          <p className="text-xs font-bold tracking-[0.2em] uppercase mb-4" style={{ color: '#06B6D4' }}>
             Chatbots & Automações
           </p>
           <h2
@@ -87,7 +87,7 @@ export default function AutomationSection() {
 
             <Reveal delay={300}>
               <div className="pt-2">
-                <ActionButton label="Quero meu chatbot" href="#contato" />
+                <ActionButton label="Quero meu chatbot" href="#contato" variant="cyan" />
               </div>
             </Reveal>
           </div>

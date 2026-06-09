@@ -23,7 +23,7 @@ export default function Hero() {
     <section className="px-4 pt-4 pb-8">
       <div
         className="grain relative overflow-hidden rounded-[2.5rem] flex flex-col min-h-[580px] md:h-[72vh] md:min-h-[620px]"
-        style={{ backgroundColor: '#0F172A' }}
+        style={{ backgroundColor: '#09090B' }}
       >
         {/* Background layers */}
         <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 0 }}>
@@ -46,21 +46,21 @@ export default function Hero() {
           <div style={{
             position: 'absolute', width: 420, height: 420,
             bottom: '8%', left: '3%', borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(6,182,212,0.18) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(124,58,237,0.18) 0%, transparent 70%)',
             filter: 'blur(60px)',
             animation: 'float-orb 18s ease-in-out infinite reverse',
           }} />
           <div style={{
             position: 'absolute', width: 280, height: 280,
             top: '38%', left: '32%', borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(108,4,58,0.16) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(124,58,237,0.16) 0%, transparent 70%)',
             filter: 'blur(50px)',
             animation: 'float-orb 22s ease-in-out infinite 5s',
           }} />
 
           <div style={{
             position: 'absolute', inset: 0,
-            background: 'linear-gradient(to bottom, transparent, rgba(15,23,42,0.1) 50%, rgba(15,23,42,0.75))',
+            background: 'linear-gradient(to bottom, transparent, rgba(9,9,11,0.1) 50%, rgba(9,9,11,0.75))',
           }} />
         </div>
 
@@ -76,7 +76,7 @@ export default function Hero() {
 
                 {/* Eyebrow */}
                 <p
-                  className="text-[11px] font-bold tracking-[0.2em] uppercase mb-5"
+                  className="text-[10px] sm:text-xs font-bold tracking-[0.2em] uppercase mb-4"
                   style={{ color: '#7C3AED', animation: 'var(--animate-fade-in-up-d1)' }}
                 >
                   Agência digital · AB3Design
@@ -89,7 +89,7 @@ export default function Hero() {
                 >
                   Você entende do negócio.
                   <br />
-                  <span style={{ color: '#06B6D4' }}>A gente faz o mundo entender.</span>
+                  <span style={{ color: '#7C3AED' }}>A gente faz o mundo entender.</span>
                 </h1>
 
                 {/* Typewriter rotativo */}
@@ -139,7 +139,7 @@ export default function Hero() {
             className="px-6 lg:px-20 py-5 shrink-0"
             style={{
               borderTop: '1px solid rgba(255,255,255,0.07)',
-              background: 'rgba(15,23,42,0.65)',
+              background: 'rgba(9,9,11,0.65)',
               backdropFilter: 'blur(16px)',
             }}
           >

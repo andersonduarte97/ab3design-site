@@ -217,7 +217,7 @@ export default function MockupBrowser() {
         <div
           className="rounded-xl p-3 sm:p-5"
           style={{
-            background: 'linear-gradient(135deg, #1E293B 0%, #0F172A 100%)',
+            background: 'linear-gradient(135deg, #18181B 0%, #09090B 100%)',
             border: '1px solid rgba(255,255,255,0.06)',
           }}
         >
@@ -245,7 +245,7 @@ export default function MockupBrowser() {
             <span className="text-[10px] sm:text-[12px] font-semibold leading-tight" style={{ color: '#06B6D4' }}>
               {subheadline.display}
               {!subheadline.done && headline.done && (
-                <span className="animate-pulse" style={{ color: 'rgba(6,182,212,0.5)' }}>|</span>
+                <span className="animate-pulse" style={{ color: 'rgba(108,4,58,0.5)' }}>|</span>
               )}
             </span>
           </div>
@@ -271,7 +271,7 @@ export default function MockupBrowser() {
               transition: 'opacity 0.5s ease, transform 0.5s ease',
             }}
           >
-            <span className="text-[8px] sm:text-[9px] font-bold text-[#0F172A] tracking-wide uppercase">
+            <span className="text-[8px] sm:text-[9px] font-bold text-[#09090B] tracking-wide uppercase">
               Começar agora
             </span>
           </div>
