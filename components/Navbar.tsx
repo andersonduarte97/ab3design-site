@@ -43,10 +43,10 @@ export default function Navbar() {
         }`}
       >
         <nav
-          className={`mx-auto flex items-center justify-between transition-all duration-500 ease-in-out border border-white/[0.08] ${
+          className={`mx-auto flex items-center justify-between transition-all duration-500 ease-in-out border border-black/[0.06] ${
             scrolled
-              ? 'w-full max-w-full rounded-none bg-slate-950/85 backdrop-blur-xl px-6 md:px-8 py-4 shadow-xl shadow-black/20'
-              : 'w-full max-w-3xl rounded-full bg-white/[0.03] backdrop-blur-md px-5 md:px-6 py-2.5 shadow-lg shadow-black/10 hover:border-white/15'
+              ? 'w-full max-w-full rounded-none bg-[#f5f4f8]/95 backdrop-blur-xl px-6 md:px-8 py-4 shadow-xl shadow-black/10'
+              : 'w-full max-w-3xl rounded-full bg-[#f5f4f8] backdrop-blur-md px-5 md:px-6 py-2.5 shadow-lg shadow-black/10 hover:border-black/10'
           }`}
         >
           {/* Logo */}
@@ -56,11 +56,11 @@ export default function Navbar() {
             aria-label="Ir para o topo"
           >
             <Image
-              src="/images/logo.svg?v=2"
+              src="/images/logo.svg?v=4"
               alt="AB3Design"
-              width={100}
-              height={32}
-              className="h-7 md:h-8 w-auto"
+              width={118}
+              height={100}
+              className="h-9 md:h-10 w-auto"
               priority
             />
           </button>
@@ -72,7 +72,7 @@ export default function Navbar() {
                 <a
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href)}
-                  className="text-white/80 hover:text-white hover:bg-white/10 rounded-full px-4 py-2 text-sm transition-all duration-200"
+                  className="text-[#0f0a1e]/70 hover:text-[#0f0a1e] hover:bg-black/[0.04] rounded-full px-4 py-2 text-sm transition-all duration-200"
                 >
                   {link.label}
                 </a>
@@ -86,7 +86,7 @@ export default function Navbar() {
               <ActionButton label="Fale conosco" href="#contato" />
             </div>
             <button
-              className="md:hidden w-10 h-10 rounded-full flex items-center justify-center text-white/80 hover:text-white hover:bg-white/10 transition-all duration-200"
+              className="md:hidden w-10 h-10 rounded-full flex items-center justify-center text-[#0f0a1e]/70 hover:text-[#0f0a1e] hover:bg-black/[0.04] transition-all duration-200"
               onClick={() => setMobileOpen(true)}
               aria-label="Abrir menu"
             >
@@ -103,16 +103,16 @@ export default function Navbar() {
         }`}
         style={{ background: '#080E1C' }}
       >
-        <div className="flex items-center justify-between px-6 pt-6 pb-4 border-b border-white/[0.06]">
+        <div className="flex items-center justify-between px-6 pt-6 pb-4 bg-[#f5f4f8]">
           <Image
-            src="/images/logo.svg?v=2"
+            src="/images/logo.svg?v=4"
             alt="AB3Design"
-            width={100}
-            height={32}
-            className="h-7 w-auto"
+            width={118}
+            height={100}
+            className="h-9 w-auto"
           />
           <button
-            className="w-10 h-10 rounded-full flex items-center justify-center text-white/60 hover:text-white hover:bg-white/10 transition-all duration-200"
+            className="w-10 h-10 rounded-full flex items-center justify-center text-[#0f0a1e]/60 hover:text-[#0f0a1e] hover:bg-black/[0.04] transition-all duration-200"
             onClick={() => setMobileOpen(false)}
             aria-label="Fechar menu"
           >

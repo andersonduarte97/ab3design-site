@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Features from '@/components/Features';
@@ -8,6 +7,7 @@ import AutomationSection from '@/components/AutomationSection';
 import ProcessBoard from '@/components/ProcessBoard';
 import Portfolio from '@/components/Portfolio';
 import ContactForm from '@/components/ContactForm';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
@@ -93,20 +93,7 @@ export default function Home() {
           </div>
         </section>
 
-        <footer className="border-t border-white/5 py-8 px-4">
-          <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-            <Image
-              src="/images/logo.svg?v=2"
-              alt="AB3Design"
-              width={80}
-              height={26}
-              className="h-6 w-auto"
-            />
-            <p className="text-xs text-[#94A3B8]/70">
-              © {new Date().getFullYear()} ab3Design. Todos os direitos reservados.
-            </p>
-          </div>
-        </footer>
+        <Footer />
       </main>
     </>
   );
