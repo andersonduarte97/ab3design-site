@@ -9,6 +9,7 @@ import {
   HeartPulse,
   FileText,
   Shield,
+  HardHat,
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
@@ -75,6 +76,15 @@ const clients: Client[] = [
     url: 'https://www.taamin.com.br',
     image: '/images/clients/taamin.webp',
     Icon: Shield,
+  },
+  {
+    name: 'Concrepac',
+    segment: 'Engenharia & Construção',
+    description:
+      'Construtora e incorporadora de médio e alto padrão, com mais de 10 anos de mercado e 950+ unidades entregues. Site institucional que transmite solidez e planejamento completo do projeto à entrega.',
+    url: 'https://concrepac.com.br',
+    image: '/images/clients/concrepac.webp',
+    Icon: HardHat,
   },
 ];
 
@@ -321,7 +331,7 @@ export default function Portfolio() {
                   className="text-3xl font-bold text-white leading-tight"
                   style={{ letterSpacing: '-0.04em' }}
                 >
-                  6+
+                  7+
                 </p>
                 <p className="text-xs text-slate-500 font-light mt-0.5">Sites entregues</p>
               </div>
